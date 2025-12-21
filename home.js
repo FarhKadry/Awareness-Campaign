@@ -1,3 +1,11 @@
+// MODE TOGGLE
+let lightModeBtn = document.getElementById('lightModeBtn');
+
+lightModeBtn.addEventListener('click', () => {
+  document.body.classList.toggle('lightMode');
+});
+
+// NAV ARRAY
 let navItems = [
     {
         id: "Home",
