@@ -7,6 +7,8 @@
     --mode: url(public/images/light.svg);
     --mainBg:#1D1D6E;
     --heroBg: url(public/images/herobg1.jpg);
+    --mainShape: url(public/images/lightMainShape.svg);
+    --btnShape:  url(public/images/btnShape1.svg);
 }
 .lightMode{
     --mainText:  #13134A;
@@ -17,7 +19,8 @@
     --mode: url(public/images/dark.svg);
     --mainBg:#F1DFD1;
     --heroBg: url(public/images/herobg2.jpg);
-
+    --mainShape: url(public/images/darkMainShape.svg);
+    --btnShape:  url(public/images/btnShape3.svg);
 }
 *{
     margin: 0;
@@ -46,7 +49,7 @@ body{
     justify-content: space-between;
     width: 100%;
     max-width: 1440px;
-    padding: 32px 72px;
+    padding: 24px 72px;
     box-sizing: border-box;
 }
 .logoContainer{
@@ -152,6 +155,7 @@ section{
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     gap: 32px;
     align-self: stretch;
 }
@@ -163,6 +167,7 @@ h2{
     line-height: normal;
     letter-spacing: 0.48px;
     text-align: center;
+    line-height: 62px;
 }
 h2 span{
     color: var(--mainAccent);
@@ -173,13 +178,81 @@ h6{
 }
 p{
     font-size: 20px;
+    font-weight: 300;
 }
 .heroBlock p{
     max-width: 700px;
     text-align: center;
     margin-top: 22px;
+    letter-spacing: 0.5px;
 }
 .mainShape{
-    width: 43px;
-height: 93px;
+    width: 66px;
+    height: 39px;
+    background: var(--mainShape);
+    align-self: center;
+    justify-self: center;
+    margin: 0px auto 9px auto;
+}
+.button1{
+    display: flex;
+    padding: 12px 17px;
+    color: #F5F5F5;
+    text-align: center;
+    font-family: "El Messiri";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    background: var(--fixedAccent);
+    position: relative;
+    bottom: 0;
+    margin: 0 20px;
+}
+.buttonsFlex{
+    display: flex;
+    gap: 16px;
+}
+.button1::before,
+.button1::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 16px;
+    height: 28px;
+    background-image: url(public/images/btnShape2.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: all 0.3s ease;
+}
+
+.button1::before {
+    left: -20px;
+}
+.button1::after {
+    right: -20px;
+    transform: translateY(-50%) scaleX(-1);
+}
+.button1:hover::before {
+    left: -25px;
+}
+
+.button1:hover::after {
+    right: -25px;
+}
+.button1:hover{
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    bottom: 5px;
+    color: #f5f5f5a3;
+}
+.button2{
+    color: var(--mainText);
+    border: 1px solid var(--mainText);
+    background: none;
+}
+.button2::before,
+.button2::after {
+    background-image: var(--btnShape);
 }
