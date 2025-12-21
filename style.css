@@ -129,7 +129,6 @@ button{
     height: 623px;
     overflow: hidden;
     position: relative;
-    margin-bottom: 400px;
 }
 .centeredBg{
     background-position: center;
@@ -309,4 +308,17 @@ p{
 .title{
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.title img{
+    width: 66px;
+    height: auto;
+}
+b{
+    font-family: inherit;
+}
+#moreText{
+    height: 0px;
+    opacity: 0;
 }

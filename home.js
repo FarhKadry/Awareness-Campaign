@@ -39,3 +39,7 @@ for (let i = 0; i < navItems.length; i++) {
     </li>
     `;
 }
+//READMOREFUNC
+function readMore(more){
+    
+}
