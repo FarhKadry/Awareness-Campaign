@@ -1,3 +1,25 @@
+:root{
+    --mainText: #F1DFD1;
+    --reverseText: #232385;
+    --mainAccent:#E85C4F;
+    --fixedAccent: #C1121F;
+    --logo: url(public/images/logo1Dark.svg);
+}
+.lightMode{
+    --mainText:  #13134A;
+    --reverseText: #F1DFD1;
+    --mainAccent:#C1121F;
+    --fixedAccent: #C1121F;
+    --logo: url(public/images/logo2.svg);
+}
+*{
+    margin: 0;
+    padding: 0;
+    color: var(--mainText);
+    font-family: "Red Hat display";
+    transition: all 0.2s ease-in-out;
+    scroll-behavior: smooth;
+}
 header{
     display: flex;
     justify-content:center;
@@ -12,8 +34,9 @@ header{
     justify-content: space-between;
     width: 100%;
     max-width: 1280px;
-    padding: 12px 0 12px 72px;
+    padding: 32px 72px;
     box-sizing: border-box;
+    background: var(--mainText);
 }
 .logoContainer{
     display: flex;
@@ -24,7 +47,7 @@ header{
 .logo_header{
     width: 138px;
     height: 23px;
-    background-image: url(public/images/logo1Dark.svg)
+    background-image: var(--logo)
 }
 .centeredBg{
     background-position: center;
@@ -35,8 +58,9 @@ nav ul{
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 26px;
+    gap: 32px;
     list-style: none;
+    height: 24px;
 }
 nav ul li {
     position: relative;
@@ -45,14 +69,15 @@ nav ul li {
     display: flex;
     align-items: center;
     text-wrap: nowrap;
+    color: var(--reverseText);
+    padding: 0 10px;
 }
-nav ul li a{
-    padding: 0 22px;
+nav ul li:hover{
+    padding: 0 10px 5px 10px;
+    color: var(--fixedAccent);
 }
 a{
     text-decoration: none;
-    height: inherit
-}
-a:hover{
-    opacity: 0.5;
+    height: inherit;
+    color: inherit;
 }
