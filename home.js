@@ -1,3 +1,10 @@
+// PRELOADER
+window.addEventListener("load", () => {
+  setTimeout(() => {
+    document.getElementById("preLoader").style.display = "none";
+  }, 2000);
+});
+
 // MODE TOGGLE
 let lightModeBtn = document.getElementById('lightModeBtn');
 
