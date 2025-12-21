@@ -9,6 +9,8 @@
     --heroBg: url(public/images/herobg1.jpg);
     --mainShape: url(public/images/lightMainShape.svg);
     --btnShape:  url(public/images/btnShape1.svg);
+    --heroMandalaOp:1;
+    
 }
 .lightMode{
     --mainText:  #13134A;
@@ -21,6 +23,7 @@
     --heroBg: url(public/images/herobg2.jpg);
     --mainShape: url(public/images/darkMainShape.svg);
     --btnShape:  url(public/images/btnShape3.svg);
+    --heroMandalaOp:0.8;
 }
 *{
     margin: 0;
@@ -123,7 +126,10 @@ button{
 .hero{
     background: var(--heroBg);
     width: 100%;
-    height: 723px;
+    height: 623px;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 400px;
 }
 .centeredBg{
     background-position: center;
@@ -201,9 +207,7 @@ p{
     text-align: center;
     font-family: "El Messiri";
     font-size: 16px;
-    font-style: normal;
     font-weight: 400;
-    line-height: 24px;
     background: var(--fixedAccent);
     position: relative;
     bottom: 0;
@@ -255,4 +259,54 @@ p{
 .button2::before,
 .button2::after {
     background-image: var(--btnShape);
+}
+.mandalasFlex{
+    width: 100%;
+    display: flex;
+    position: absolute;
+    gap: 0;
+    bottom: -250px;
+    align-items: center;
+    justify-content: center;
+    justify-self: center;
+    opacity: var(--heroMandalaOp);
+}
+.mandalasFlex img{
+    width: 372px;
+    height: auto;
+    transform: rotate(0deg);
+
+}
+.rotateanim{
+    animation: rotate 4s linear infinite;
+}
+.rotateanim2{
+    animation: rotate2 4s linear infinite;
+}
+@keyframes rotate{
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+.scroll_animate2{
+    view-timeline: --scroll-tl;
+    animation-timeline: --scroll-tl;
+    animation-delay: cover 30%;
+    animation-range: cover 30% cover 35%;
+}
+@keyframes rotate2{
+    from {
+        transform: rotate(360deg);
+        
+    }
+    to {
+        transform: rotate(0deg);
+    }
+}
+.title{
+    display: flex;
+    flex-direction: column;
 }
