@@ -9,6 +9,8 @@ localStorage.setItem("titleEN", titleEN);
 localStorage.setItem("language", language);
 localStorage.setItem("loaded", loaded);
 };
+
+// FORMFUNC
 function saveFormData() {
     let name = document.getElementById('name').value;
     let email = document.getElementById('email').value;

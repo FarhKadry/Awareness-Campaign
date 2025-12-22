@@ -616,3 +616,84 @@ h3{
 .langBtn:hover{
     opacity: 0.5;
 }
+footer {
+    background: var(--bg3);
+    color: var(--mainText);
+    padding: 40px 72px;
+    text-align: center;
+    margin-top: 80px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.footer-content {
+    max-width: 1440px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.footer-logo {
+    width: 138px;
+    height: 23px;
+    background-image: var(--logo);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin: 0 auto;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    flex-wrap: wrap;
+}
+
+.footer-links a {
+    color: var(--grey);
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 400;
+    opacity: 1;
+    position: relative;
+    bottom: 0;
+}
+
+.footer-links a:hover {
+    opacity: 0.7;
+    bottom: 4px;
+}
+h5{
+    font-family: "El Messiri";
+    font-size: 24px;
+    color: var(--mainText);
+    font-weight: 400;
+}
+.footer-text {
+    font-size: 14px;
+    opacity: 0.5;
+    font-weight: 300;
+}
+footer img{
+    height: 31px;
+    width: auto;
+}
+footer .title{
+    margin-bottom: 0;
+}
+.topBtn{
+    border-bottom: 1px solid var(--mainText);
+    width: fit-content;
+    justify-self: center;
+    align-self: center;
+}
+.topBtn:hover{
+    color: var(--mainAccent);
+    border-bottom: 1px solid var(--mainAccent);
+}
+footer .container{
+    margin: 0;
+    padding: 0;
+}
