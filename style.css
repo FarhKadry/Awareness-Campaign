@@ -17,7 +17,10 @@
     --factBg: url(public/images/factbgDark.svg);
     --shadow2:drop-shadow(0 25px 50px -12px rgba(0, 0, 0, 0.5));
     --fadedText:#f5f5f5a3;
-
+    --cardIcon1: url(public/images/cardicon20101.svg);
+    --cardIcon2: url(public/images/cardicon20202.svg);
+    --cardIcon3: url(public/images/cardicon20303.svg);
+    --cardIcon4: url(public/images/cardicon20404.svg);
 }
 .lightMode{
     --mainText:  #13134A;
@@ -38,7 +41,10 @@
     --factBg: url(public/images/factbgLight.svg);
     --shadow2:drop-shadow(0 25px 50px -12px rgba(0, 0, 0, 0.5));
     --fadedText:#13134a95;
-
+     --cardIcon1: url(public/images/cardicon201.svg);
+    --cardIcon2: url(public/images/cardicon202.svg);
+    --cardIcon3: url(public/images/cardicon203.svg);
+    --cardIcon4: url(public/images/cardicon204.svg);
 }
 *{
     margin: 0;
@@ -513,10 +519,12 @@ h3{
 .cardsFlex{
     display: flex;
     gap: 32px;
+    justify-self: center;
+    align-self: center;
 }
 .card1{
     display: flex;
-    width: 245.091px;
+    width: 245px;
     padding: 24px;
     flex-direction: column;
     align-items: flex-start;
@@ -525,7 +533,8 @@ h3{
     box-sizing: border-box;
     position: relative;
     height: 328px;
-    max-height: 328px;;
+    max-height: 316px;
+    overflow: hidden;
 }
 .card1Title{
     display: flex;
@@ -542,9 +551,28 @@ h3{
     text-align: left;
     color: var(--grey);
 }
+.cardIcon1{
+    background-image: var(--cardIcon1);
+}
+.cardIcon2{
+    background-image: var(--cardIcon2);
+}
+.cardIcon3{
+    background-image: var(--cardIcon3);
+}
+.cardIcon4{
+    background-image: var(--cardIcon4);
+}
 .card1Icon{
     width: 63px;
     height: 63px;
-    background-image: url(public/images/vector.svg);
     margin-bottom: 12px;
+}
+.card1Deco{
+    width: 134px;
+    height: auto;
+    position: absolute;
+    right: -5px;
+    top: 0;
+    transform: rotate(180deg);
 }
