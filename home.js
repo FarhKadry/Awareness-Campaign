@@ -89,3 +89,35 @@ function formSubmission() {
     }
     return false; 
 }
+
+// FACTSRANDOM
+let randFacts = [
+    {
+        title: "Napoleon’s Description de l’Égypte documented Khayyamiyya workshops in the early 1800s, proving the craft’s long-standing cultural value.",
+        factRef: "— Description de l’Égypte"
+    },
+    {
+        title: "Khayamiyya panels were traditionally hand-stitched near Bab Zuweila in Cairo, a street still dedicated to the craft today.",
+        factRef: "— Historic Cairo records"
+    },
+    {
+        title: "The art of Khayyamiyya was originally used to decorate ceremonial tents for festivals, weddings, and royal events.",
+        factRef: "— Egyptian folk traditions"
+    },
+    {
+        title: "Khayamiyya designs are inspired by Islamic geometry, floral motifs, and stories from daily Egyptian life.",
+        factRef: "— Visual heritage studies"
+    },
+    {
+        title: "Despite industrial printing, Khayyamiyya remains entirely handmade, with some panels taking weeks to complete.",
+        factRef: "— Artisan accounts"
+    }
+];
+let randomFacts = Math.floor(Math.random() * randFacts.length);
+let factsSec = document.getElementById("factsSec");
+
+factsSec.innerHTML = `
+    <h3 class="messiri">Did You Know?</h3>
+    <p >${randFacts[randomFacts].title}</p>
+    <h6>${randFacts[randomFacts].factRef}</h6>
+`;

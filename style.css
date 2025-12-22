@@ -14,6 +14,9 @@
     --grey:#99A1AF;
     --bg3: #101828;
     --shadow:drop-shadow(0 25px 50px -12px rgba(0, 0, 0, 0.25));
+    --factBg: url(public/images/factbgDark.svg);
+    --shadow2:drop-shadow(0 25px 50px -12px rgba(0, 0, 0, 0.5));
+
 }
 .lightMode{
     --mainText:  #13134A;
@@ -31,6 +34,8 @@
     --grey: #364153;
     --bg3: #fceade;
     --shadow:drop-shadow(0 25px 50px -12px rgba(0, 0, 0, 0.25));
+    --factBg: url(public/images/factbgLight.svg);
+    --shadow2:drop-shadow(0 25px 50px -12px rgba(0, 0, 0, 0.5));
 }
 *{
     margin: 0;
@@ -491,4 +496,21 @@ h3{
 }
 #moreBtn{
     margin-top: 22px;
+}
+.factSection{
+    background-image: var(--factBg);
+    padding: 200px;
+    box-sizing: border-box;
+    background-position: center;
+    height: 571px;
+    width: 984px;
+    filter: var(--shadow2);
+    margin:20px 0 100px 0;
+}
+.factSection p{
+    margin: 22px 0;  
+}
+.factSection h6{
+    color: var(--mainAccent);
+    font-style: italic;
 }
