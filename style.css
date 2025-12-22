@@ -535,6 +535,7 @@ h3{
     height: 328px;
     max-height: 316px;
     overflow: hidden;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.10), 0 4px 6px -4px rgba(0, 0, 0, 0.10);
 }
 .card1Title{
     display: flex;
@@ -575,4 +576,43 @@ h3{
     right: -5px;
     top: 0;
     transform: rotate(180deg);
+}
+.moveIn{
+    position: relative;
+    transform: translateY(100px);
+    animation: move-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+}
+@keyframes move-in{
+  0% {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  80% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.scroll_animate2{
+    view-timeline: --scroll-tl;
+    animation-timeline: --scroll-tl;
+    animation-delay: cover 30%;
+    animation-range: cover 30% cover 35%;
+}
+.langBtn{
+    display: flex;
+    padding: 4px;
+    background: var(--mainText);
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--mainBg);
+    color: var(--reverseText);
+    width: 45px;
+    box-sizing: border-box;
+}
+.langBtn:hover{
+    opacity: 0.5;
 }

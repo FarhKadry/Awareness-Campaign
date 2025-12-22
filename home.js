@@ -1,3 +1,24 @@
+
+let localLang = localStorage.getItem("language") || "EN";
+
+function updateLanguageContent() {
+    const heroPara = document.getElementById("heroPara");
+    if (heroPara) {
+        const title = localStorage.getItem("title" + localLang);
+        if (title) {
+            heroPara.innerHTML = title;
+        }
+    }
+}
+
+function changeLang(lang) {
+    localStorage.setItem("language", lang);
+    window.location.reload();
+}
+window.addEventListener("load", () => {
+    updateLanguageContent();
+});
+
 // PRELOADER
 window.addEventListener("load", () => {
   setTimeout(() => {
@@ -36,7 +57,6 @@ let navItems = [
     }
 ];
 let navUl = document.getElementById('navArray').querySelector('ul');
-
 for (let i = 0; i < navItems.length; i++) {
     navUl.innerHTML += `
     <li>
@@ -68,20 +88,14 @@ function validateForm() {
     let message = document.getElementById('msg').value;
     if (name === '' || email === '' || message === '') {
         alert('Please fill in all fields');
-        return false;
+    return false;
     }
     return true;
 }
-// function showSuccessSendMsg() {
-//     const successMessage = document.getElementById('successMessage');
-//     successMessage.style.display = "block";
-
-//     setTimeout(() => {
-//         successMessage.style.display = "none";
-//     }, 10000);
-
-//     document.getElementById('form1').reset();
-// }
+function showSuccessSendMsg() {
+    alert('form filled successfully!');
+    document.getElementById('form1').reset();
+}
 function formSubmission() {
     if (validateForm()) {
         saveFormData();
@@ -121,3 +135,38 @@ factsSec.innerHTML = `
     <p >${randFacts[randomFacts].title}</p>
     <h6>${randFacts[randomFacts].factRef}</h6>
 `;
+let cardsData = [
+  {
+    iconClass: "cardIcon1",
+    title: "Economic Pressure",
+    desc: "Rising costs and low returns make it hard for artisans to sustain the craft."
+  },
+  {
+    iconClass: "cardIcon2",
+    title: "Aging Artisans",
+    desc: "Few young people are learning the craft, risking generational knowledge loss."
+  },
+  {
+    iconClass: "cardIcon3",
+    title: "Declining Demand",
+    desc: "Modern alternatives are replacing traditional handmade textiles."
+  },
+  {
+    iconClass: "cardIcon4",
+    title: "Time-Intensive",
+    desc: "Each piece requires months of painstaking work, making it economically challenging."
+  }
+];
+let cardsFlex = document.getElementById("cardsFlex");
+for (let i = 0; i < cardsData.length; i++) {
+  cardsFlex.innerHTML += `
+    <div class="card1">
+      <img class="card1Deco" src="public/images/darkMainShape.svg" alt="">
+      <div class="card1Icon ${cardsData[i].iconClass} centeredBg"></div>
+      <div class="card1Title">
+        ${cardsData[i].title}
+      </div>
+      <h6>${cardsData[i].desc}</h6>
+    </div>
+  `;
+}
