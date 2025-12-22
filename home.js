@@ -62,23 +62,31 @@ function readMore(){
     }
 }
 
-// LIGHTBOX
-function openModal() {
-  document.getElementById("myModal").style.display = "block";
+// FORM
+function validateForm() {
+    let name = document.getElementById('name').value;
+    let email = document.getElementById('email').value;
+    let message = document.getElementById('msg').value;
+    if (name === '' || email === '' || message === '') {
+        alert('Please fill in all fields');
+        return false;
+    }
+    return true;
 }
+// function showSuccessSendMsg() {
+//     const successMessage = document.getElementById('successMessage');
+//     successMessage.style.display = "block";
 
-// Close the Modal
-function closeModal() {
-  document.getElementById("myModal").style.display = "none";
-}
+//     setTimeout(() => {
+//         successMessage.classList.add('hidden');
+//     }, 10000);
 
-var slideIndex = 1;
-showSlides(slideIndex);
-
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
-
-function currentSlide(n) {
-  showSlides(slideIndex = n);
+//     document.getElementById('form1').reset();
+// }
+function formSubmission() {
+    if (validateForm()) {
+        saveFormData();
+        showSuccessSendMsg();
+    }
+    return false; 
 }
