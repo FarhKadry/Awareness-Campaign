@@ -13,6 +13,7 @@
     --bg2:#252555;
     --grey:#99A1AF;
     --bg3: #101828;
+    --shadow:drop-shadow(0 25px 50px -12px rgba(0, 0, 0, 0.25));
 }
 .lightMode{
     --mainText:  #13134A;
@@ -28,13 +29,14 @@
     --heroMandalaOp:0.8;
     --bg2:#FFE2CD;
     --grey: #364153;
-    --bg3: #101828;
+    --bg3: #fceade;
+    --shadow:drop-shadow(0 25px 50px -12px rgba(0, 0, 0, 0.25));
 }
 *{
     margin: 0;
     padding: 0;
     color: var(--mainText);
-    font-family: "Red Hat display";
+    font-family: "Tajawal";
     transition: all 0.2s ease-in-out;
     scroll-behavior: smooth;
     text-align: center;
@@ -109,6 +111,15 @@ a{
     height: inherit;
     color: inherit;
 }
+nav ul li.active {
+    border-bottom: 2px solid var(--fixedAccent);
+    opacity: 1;
+}
+
+nav ul li.active a {
+    color: var(--fixedAccent);
+    font-weight: 700;
+}
 .lightButton{
     position: fixed;
     z-index: 999;
@@ -117,7 +128,6 @@ a{
     right: 5vw;
     padding: 12px;
     border-radius: 33px;
-
 }
 .lightButton:hover{
     margin-bottom: 5px;
@@ -338,10 +348,6 @@ p{
 b{
     font-family: inherit;
 }
-#moreText{
-    height: 0px;
-    opacity: 0;
-}
 .popUp{
     width: 100vw;
     height: 100vh;
@@ -456,4 +462,33 @@ h3{
 }
 .success-message{
     display: none;
+}
+.aboutContent{
+    display: flex;
+    gap: 22px;
+    flex-direction: row;
+    align-items: center;
+}
+.aboutContent img{
+    max-width: 418px;
+    width: 33%;
+    object-fit: contain;
+    height: auto;
+    filter: var(--shadow); 
+}
+.aboutContent p{
+    text-align: left;
+}
+.moretext {
+  height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: all ease-in-out;
+}
+.moretext.open {
+  height: auto; 
+  opacity: 1;
+}
+#moreBtn{
+    margin-top: 22px;
 }

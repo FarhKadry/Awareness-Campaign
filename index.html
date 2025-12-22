@@ -8,6 +8,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@400..700&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap" rel="stylesheet">
 </head>
 <body>
     <div id="preLoader" class="popUp">
@@ -36,7 +39,7 @@
         </div>
     </header>
     <main>
-        <section class="hero centeredBg">
+        <section id="Home" class="hero centeredBg">
             <div class="container">
                 <div class="heroBlock">
                     <div class="flex_column">
@@ -50,8 +53,8 @@
                     <p>In the heart of Cairo, master artisans preserve an ancient craft. But time is running out. Every stitch tells a story that shouldn't be forgotten.</p>
                 </div>
                 <div class="buttonsFlex">
-                    <button class="button1">Learn the Story</button>
-                    <button class="button1 button2">Support the Art</button>
+                    <button id="heroBtn1" class="button1">Learn the Story</button>
+                    <button id="heroBtn2" class="button1 button2">Support the Art</button>
                 </div>
                 </div>
             </div>
@@ -65,20 +68,26 @@
             <div class="container">
                 <div class="title">
                     <img src="public/images/darkMainShape.svg" alt="">
-                    <h2>What is <b>Khayyamiyya?</b></h2>
+                    <h2 id="moreTitle">What is <b>Khayyamiyya?</b></h2>
                 </div>
-                <p>(خيامية) Khayyamiyya is an ancient Egyptian art form of appliqué tent-making that dates back centuries. The name derives from the Arabic word "khayma" (خيمة), meaning tent.</p>
-                <p class="moretext" id="moreText">This intricate craft involves cutting colorful cotton fabrics into geometric and floral patterns, then hand-stitching them onto a background cloth to create stunning, vibrant tapestries. Each piece is a masterwork of precision, patience, and cultural heritage.</p>
+                <div class="aboutContent">
+                <div class="flex_column">
+                            <p id="moreText1"> Khayyamiyya (خيامية) is an ancient Egyptian art form of appliqué tent-making that dates back centuries. The name derives from the Arabic word "khayma" (خيمة), meaning tent.</p>
+                <p itemid="moreText2" class="moretext" id="moreText2">This intricate craft involves cutting colorful cotton fabrics into geometric and floral patterns, then hand-stitching them onto a background cloth to create stunning, vibrant tapestries. Each piece is a masterwork of precision, patience, and cultural heritage.</p>
                 <div class="buttonsFlex">
-                    <button onclick="readMore()" class="button1 button2">Read More</button>
+                    <button id="moreBtn" onclick="readMore()" class="button1 button2">Read More</button>
                 </div>
+                        </div>
+                        <img src="public/images/aboutSecImg.png">
+                </div>
+                
             </div>
         </section>
-        <section class="contactForm">
+        <section id="Action" class="contactForm">
             <div class="contactFormImg centeredBg"></div>
             <div class="title">
-                    <h3 class="messiri">Be Part of the Solution - Join Workshops!</h3>
-                    <h6>Your involvement—whether through purchasing, visiting, sharing, or donating—directly impacts the survival of this ancient craft and the livelihoods of the artisans who keep it alive.</h6>
+                    <h3 id="formTitle" class="messiri">Be Part of the Solution - Join Workshops!</h3>
+                    <h6 id="formSub">Your involvement—whether through purchasing, visiting, sharing, or donating—directly impacts the survival of this ancient craft and the livelihoods of the artisans who keep it alive.</h6>
                 </div>
             <form id="form1">
                 <div class="nameMailFlex">

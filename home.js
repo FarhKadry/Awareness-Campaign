@@ -47,20 +47,19 @@ for (let i = 0; i < navItems.length; i++) {
     `;
 }
 //READMOREFUNC
-function readMore(){
-    let moreText = document.getElementById('moreText');
-    let button = document.querySelector('.button1.button2');
-    
-    if(moreText.style.height === '0px'){
-        moreText.style.height = moreText.scrollHeight + 'px';
-        moreText.style.opacity = '1';
+function readMore() {
+    let moreText = document.getElementById('moreText2');
+    let button = document.getElementById('moreBtn');
+
+    moreText.classList.toggle('open');
+
+    if (moreText.classList.contains('open')) {
         button.textContent = 'Read Less';
     } else {
-        moreText.style.height = '0px';
-        moreText.style.opacity = '0';
         button.textContent = 'Read More';
     }
 }
+
 
 // FORM
 function validateForm() {
@@ -78,7 +77,7 @@ function validateForm() {
 //     successMessage.style.display = "block";
 
 //     setTimeout(() => {
-//         successMessage.classList.add('hidden');
+//         successMessage.style.display = "none";
 //     }, 10000);
 
 //     document.getElementById('form1').reset();
