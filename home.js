@@ -61,7 +61,8 @@ function readMore(){
         button.textContent = 'Read More';
     }
 }
-// Open the Modal
+
+// LIGHTBOX
 function openModal() {
   document.getElementById("myModal").style.display = "block";
 }
@@ -74,13 +75,10 @@ function closeModal() {
 var slideIndex = 1;
 showSlides(slideIndex);
 
-// Next/previous controls
 function plusSlides(n) {
   showSlides(slideIndex += n);
 }
 
-// Thumbnail image controls
 function currentSlide(n) {
   showSlides(slideIndex = n);
 }
-
