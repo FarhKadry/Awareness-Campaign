@@ -10,7 +10,8 @@
     --mainShape: url(public/images/lightMainShape.svg);
     --btnShape:  url(public/images/btnShape1.svg);
     --heroMandalaOp:1;
-    
+    --bg2:#252555;
+    --grey:#99A1AF;
 }
 .lightMode{
     --mainText:  #13134A;
@@ -24,6 +25,8 @@
     --mainShape: url(public/images/darkMainShape.svg);
     --btnShape:  url(public/images/btnShape3.svg);
     --heroMandalaOp:0.8;
+    --bg2:#FFE2CD;
+    --grey: #364153;
 }
 *{
     margin: 0;
@@ -32,6 +35,15 @@
     font-family: "Red Hat display";
     transition: all 0.2s ease-in-out;
     scroll-behavior: smooth;
+}
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+background:none;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--fixedAccent);
 }
 header{
     display: flex;
@@ -344,4 +356,16 @@ b{
 .preLoader img{
     width: 144px;
     height: 144px;
+}
+.card1{
+    display: flex;
+    width: 245.091px;
+    padding: 24px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 13px;
+}
+.contactForm{
+    width: 100%;
+    max-width: 1080px;
 }
