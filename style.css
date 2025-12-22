@@ -5,14 +5,14 @@
     --fixedAccent: #C1121F;
     --logo: url(public/images/logo1Dark.svg);
     --mode: url(public/images/light.svg);
-    --mainBg:#1D1D6E;
+    --mainBg:#13134A;
     --heroBg: url(public/images/herobg1.jpg);
     --mainShape: url(public/images/lightMainShape.svg);
     --btnShape:  url(public/images/btnShape1.svg);
     --heroMandalaOp:1;
     --bg2:#252555;
     --grey:#99A1AF;
-    --bg3: #101828;
+    --bg3: #151537;
     --shadow:drop-shadow(0 25px 50px -12px rgba(0, 0, 0, 0.25));
     --factBg: url(public/images/factbgDark.svg);
     --shadow2:drop-shadow(0 25px 50px -12px rgba(0, 0, 0, 0.5));
@@ -21,6 +21,8 @@
     --cardIcon2: url(public/images/cardicon20202.svg);
     --cardIcon3: url(public/images/cardicon20303.svg);
     --cardIcon4: url(public/images/cardicon20404.svg);
+    --gradient1:linear-gradient(0deg, #13134A 0%, rgba(29, 29, 109, 0.00) 100%);
+    --statsBg:url(public/images/StatisticsSection.jpg);
 }
 .lightMode{
     --mainText:  #13134A;
@@ -45,6 +47,8 @@
     --cardIcon2: url(public/images/cardicon202.svg);
     --cardIcon3: url(public/images/cardicon203.svg);
     --cardIcon4: url(public/images/cardicon204.svg);
+    --gradient1:linear-gradient(0deg, #F1DFD1 0%, rgba(68, 65, 137, 0.00) 100%);
+    --statsBg:url(public/images/StatisticsSectionLight.jpg);
 }
 *{
     margin: 0;
@@ -63,6 +67,20 @@ background:none;
 }
 ::-webkit-scrollbar-thumb {
   background: var(--fixedAccent);
+}
+.separatorBottom{
+    width: 100%;
+    z-index: 9;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 50px;
+    background: var(--gradient1);
+}
+.separtorTop{
+    bottom: unset;
+    top: -5px;
+    transform: rotate(180deg);
 }
 header{
     display: flex;
@@ -423,7 +441,7 @@ input {
     width: 100%; 
     padding: 12px; 
     box-sizing: border-box; 
-    background: var(--bg2);
+    background: var(--mainBg);
     border: none;
     color: var(--grey);
     outline: none;
@@ -449,7 +467,7 @@ input:focus{
     width: 100%;
 }
 .contactForm form{
-    padding: 22px 34px;
+    padding: 22px 34px 80px 34px;
     box-sizing: border-box;
 }
 form .button1{
@@ -535,7 +553,13 @@ h3{
     height: 328px;
     max-height: 316px;
     overflow: hidden;
+    bottom: 0;
+    box-shadow: 0 10px 10px -3px rgba(0, 0, 0, 0.10), 0 4px 6px -4px rgba(0, 0, 0, 0.10);
+}
+.card1:hover {
+    bottom: 5px;
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.10), 0 4px 6px -4px rgba(0, 0, 0, 0.10);
+
 }
 .card1Title{
     display: flex;
@@ -608,22 +632,28 @@ h3{
     background: var(--mainText);
     justify-content: center;
     align-items: center;
-    border: 1px solid var(--mainBg);
+    border: 1px solid var(--reverseText);
     color: var(--reverseText);
     width: 45px;
     box-sizing: border-box;
+    bottom: 0;
+    position: relative;
 }
 .langBtn:hover{
     opacity: 0.5;
+    bottom: 4px;
 }
+
 footer {
-    background: var(--bg3);
+    background: var(--heroBg);
     color: var(--mainText);
     padding: 40px 72px;
     text-align: center;
     margin-top: 80px;
     width: 100%;
     box-sizing: border-box;
+    background-attachment: fixed;
+    position: relative;
 }
 
 .footer-content {
@@ -673,7 +703,7 @@ h5{
 }
 .footer-text {
     font-size: 14px;
-    opacity: 0.5;
+    color: var(--grey);
     font-weight: 300;
 }
 footer img{
@@ -696,4 +726,19 @@ footer .title{
 footer .container{
     margin: 0;
     padding: 0;
+}
+.statsSection{
+    background-image: var(--statsBg);
+    height: 537px;
+}
+.statsContainer{
+    display: flex;
+    gap: 14px;
+}
+.satsLeft{
+    display: flex;
+width: 245px;
+flex-direction: column;
+align-items: flex-start;
+gap: 43px;
 }

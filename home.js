@@ -1,10 +1,16 @@
+// PRELOADER
+window.addEventListener("load", () => {
+  setTimeout(() => {
+    document.getElementById("preLoader").style.display = "none";
+  }, 800);
+});
 
 let localLang = localStorage.getItem("language") || "EN";
 
 function updateLanguageContent() {
-    const heroPara = document.getElementById("heroPara");
+    let heroPara = document.getElementById("heroPara");
     if (heroPara) {
-        const title = localStorage.getItem("title" + localLang);
+        let title = localStorage.getItem("title" + localLang);
         if (title) {
             heroPara.innerHTML = title;
         }
@@ -19,12 +25,7 @@ window.addEventListener("load", () => {
     updateLanguageContent();
 });
 
-// PRELOADER
-window.addEventListener("load", () => {
-  setTimeout(() => {
-    document.getElementById("preLoader").style.display = "none";
-  }, 2000);
-});
+
 
 // MODE TOGGLE
 let lightModeBtn = document.getElementById('lightModeBtn');
