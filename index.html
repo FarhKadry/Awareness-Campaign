@@ -30,9 +30,15 @@
         <div class="header_container">
             <div class="logoContainer">
             <div class="logo_header centeredBg"></div>
-            <button class="langBtn" onclick="changeLang('AR')">AR</button>
+            <div class="btnFlex1">
+                <button class="langBtn" onclick="changeLang('AR')">AR</button>
             <button class="langBtn" onclick="changeLang('EN')">EN</button>
             </div>
+            <a href="login.html">
+                <button class="langBtn loginBtn"><div class="centeredBg"></div></button>
+            </a>
+            </div>
+            
             <nav id="navArray">
                 <ul>
                     <!-- HEADERCONTENT -->
@@ -44,7 +50,7 @@
         <section id="Home" class="hero centeredBg">
             <div class="container">
                 <div class="heroBlock">
-                    <div class="flex_column">
+                    <div class="flex_column moveIn2">
                         <div class="mainShape centeredBg"></div>
                     <h2>
                         قبل ما <span>تبهت</span> الأشكال. 
@@ -69,7 +75,7 @@
                 <img class="rotateanim scroll_animate2" src="public/images/mandala1.svg">
             </div>
         </section>
-        <section id="About">
+        <section id="About" class="scroll_animate2 moveIn">
             <div class="container">
                 <div class="title">
                     <img src="public/images/darkMainShape.svg" alt="">
@@ -88,8 +94,8 @@
             </div>
         </section>
         <!-- FACTS -->
-         <section>
-            <div id="factsSec" class="container factSection scroll_animate2 moveIn">
+         <section class="scroll_animate2 moveIn">
+            <div id="factsSec" class="container factSection">
                 <h3 class="messiri">Did You Know?</h3>
                 <p id="fact1">Napoleon's Description de l'Égypte documented Khayyamiyya workshops in the early 1800s, showing their historical significance.</p>
                 <h6 id="factRef">— historical records </h6>
@@ -100,7 +106,7 @@
             <div class="container">
                 <div class="title">
                     <img src="public/images/darkMainShape.svg" alt="">
-                    <h2 id="whyTitle">Why It's Disappearing</b></h2>
+                    <h2 id="whyTitle">Why It's Fading</b></h2>
                     <h6 id="whySub">A storm of challenges threatens to erase this ancient art forever</h6>
                 </div>
                 <div id="cardsFlex" class="cardsFlex scroll_animate2 moveIn ">
@@ -112,7 +118,7 @@
            <section class="hero statsSection centeredBg margined ">
             <div class="separatorBottom separtorTop"></div>
             <div class="separatorBottom"></div>
-            <div class="container">
+            <div class="container ">
                     <div class="title scroll_animate2 moveIn">
                     <h2 id="statsTitle">The Numbers Send Alarms</h2>
                     <p>A tradition on the brink of extinction</p>
@@ -155,10 +161,10 @@
             </div>
            </section>
         <!-- CONTACTFORM -->
-        <section id="Action" class="contactForm">
+        <section id="Action" class="contactForm scroll_animate2 moveIn">
             <div class="contactFormImg centeredBg"></div>
             <div class="title">
-                    <h3 id="formTitle" class="messiri">Be Part of the Solution - Join Workshops!</h3>
+                    <h3 id="formTitle" class="messiri scroll_animate2 moveIn">Be Part of the Solution - Join Workshops!</h3>
                     <h6 id="formSub">Your involvement—whether through purchasing, visiting, sharing, or donating—directly impacts the survival of this ancient craft and the livelihoods of the artisans who keep it alive.</h6>
                 </div>
             <form id="form1">
@@ -177,7 +183,7 @@
                         <label for="message">Message:</label>
                         <input placeholder="Enter Message Here" type="text" id="msg" name="message">
                     </div>
-        <button onclick="formSubmission()" type="submit" class="button1">Submit & Join!</button>
+        <button onclick="formSubmission()" type="submit" class="button1 button2">Submit & Join!</button>
     </form>
         </section>
     </main>

@@ -24,6 +24,8 @@
     --gradient1:linear-gradient(0deg, #13134A 0%, rgba(29, 29, 109, 0.00) 100%);
     --statsBg:url(public/images/StatisticsSection.jpg);
     --statsFig: url(public/images/statsFigure.svg);
+    --loginIcon: url(public/images/login1.svg);
+
 }
 .lightMode{
     --mainText:  #13134A;
@@ -51,6 +53,7 @@
     --gradient1:linear-gradient(0deg, #F1DFD1 0%, rgba(68, 65, 137, 0.00) 100%);
     --statsBg:url(public/images/StatisticsSectionLight.jpg);
     --statsFig: url(public/images/statsFigure2.svg);
+    --loginIcon: url(public/images/login2.svg);
 }
 *{
     margin: 0;
@@ -278,6 +281,8 @@ p{
 .buttonsFlex{
     display: flex;
     gap: 16px;
+    animation: move-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) 1800ms both;
+
 }
 .button1::before,
 .button1::after {
@@ -291,9 +296,8 @@ p{
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    transition: all 0.3s ease;
+    transition: all 0.8s ease;
 }
-
 .button1::before {
     left: -20px;
 }
@@ -332,6 +336,7 @@ p{
     justify-content: center;
     justify-self: center;
     opacity: var(--heroMandalaOp);
+    animation: move-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) 1s both;
 }
 .mandalasFlex img{
     width: 372px;
@@ -612,7 +617,7 @@ h3{
     align-items: center;
     border: 1px solid var(--reverseText);
     color: var(--reverseText);
-    width: 45px;
+    width: 32px;
     box-sizing: border-box;
     bottom: 0;
     position: relative;
@@ -764,6 +769,11 @@ h1{
     transform: translateY(100px);
     animation: move-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
 }
+.moveIn{
+    position: relative;
+    transform: translateY(100px);
+    animation: move-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) 800ms both;
+}
 @keyframes move-in{
   0% {
     transform: translateY(100px);
@@ -783,4 +793,40 @@ h1{
     animation-timeline: --scroll-tl;
     animation-delay: cover 30%;
     animation-range: cover 30% cover 35%;
+}
+.btnFlex1{
+    display: flex;
+    gap: 4px;
+}
+.closeBtn{
+    align-self: flex-start;
+    justify-self: flex-start;
+}
+.loginBtn{
+    border: none;
+}
+.loginBtn div{
+    background-image: var(--loginIcon);
+    width: 32px;
+    height: 32px;
+}
+.loginForm{
+    width: 70%;
+    padding: 44px;
+    position: relative;
+    
+}
+.loginForm form{
+    z-index: 2;
+    padding: 22px 0;
+}
+.loginForm .mandala{
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+}
+.loginHero{
+    min-height: 100vh;
+    padding: 100px 0;
+    position: relative;
 }

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khayyamiya.</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@400..700&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="preLoader" class="popUp">
+            <div class="preLoader">
+                <img  class="rotateanim2" src="public/images/mandala1.svg" alt="">
+            <!-- <div class="typewriter">
+                <h6>loading...</h6>
+            </div> -->
+            </div>
+    </div>
+    <aside>
+        <button title="Switch Mode" class="lightButton" id="lightModeBtn">
+        <div class="centeredBg"></div>
+    </button>
+    </aside>
+    <header>
+        <div class="header_container">
+            <a href="index.html"><div class="logo_header centeredBg"></div></a>
+            <div class="btnFlex1">
+                <button class="langBtn" onclick="changeLang('AR')">AR</button>
+            <button class="langBtn" onclick="changeLang('EN')">EN</button>
+            </div>
+            </div>
+            <!-- <nav id="navArray">
+                <ul>
+                
+                </ul>
+            </nav> -->
+        </div>
+    </header>
+    <main>
+        <section class="hero loginHero centeredBg">
+            <div class="container">
+                <div class="contactForm loginForm scroll_animate2 moveIn">
+            <div class="flex_column moveIn2">
+                        <div class="mainShape centeredBg"></div>
+                    <h2>
+                        قبل ما <span>تبهت</span> الأشكال. 
+                    </h2>
+                    <h2>
+                       Before the patterns <span>fade.</span>
+                    </h2>
+                </div>
+            <form id="form1">
+                <div class="nameMailFlex">
+                    <!-- name -->
+                    <div class="input1">
+                        <label for="name">Name:</label>
+                        <input placeholder="Enter Name Here" type="text" id="name" name="name">
+                    </div>
+                    <div class="input1">
+                        <label for="email">Email:</label>
+                        <input  placeholder="Enter Email Here" type="email" id="email" name="email">
+                    </div>
+                </div>
+                <div class="input1 input2"> 
+                        <label for="password">Password:</label>
+                        <input placeholder="Enter Password Here" type="password" id="Upass" name="password">
+                    </div>
+        <button onclick="formSubmission()" type="submit" class="button1">Submit & Join!</button>
+    </form>
+            <img class="mandala rotateanim2" src="public/images/mandala1.svg">
+
+</div>
+            </div>
+            <div class="separatorBottom"></div>
+            </section>
+    </main>
+    <!-- FOOTERSTART -->
+    <footer class="centeredBg">
+            <div class="separatorBottom separtorTop"></div>
+    <div class="container footer-content">
+        <div class="title">
+            <img src="public/images/darkMainShape.svg" alt="">
+        <h5>Before the Patterns Fade</h5>
+        </div>
+        <div class="footer-links">
+            <a href="index.html">Home</a>
+        </div>
+        <a class="topBtn" href="#Home">Back To Top</a>
+        <h6 class="footer-text">© 2024 Khayyamiya. Preserving ancient Egyptian craftsmanship.</h6>
+    </div>
+</footer>
+    <script src="localStorage.js"></script>
+    <script src="home.js"></script>
+</body>
+</html>
