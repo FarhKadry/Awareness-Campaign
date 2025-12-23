@@ -58,6 +58,35 @@ if (!localStorage.getItem("loaded")) {
   localStorage.setItem("statsSubAR",
     "تراث يقترب من الاندثار."
   );
+/* STATS – BLOCK 1 */
+localStorage.setItem("stat1PrefixEN", "more than");
+localStorage.setItem("stat1PrefixAR", "أكثر من");
+
+localStorage.setItem("stat1TitleEN", "YEARS");
+localStorage.setItem("stat1TitleAR", "عام");
+
+localStorage.setItem("stat1SubEN", "of cultural heritage");
+localStorage.setItem("stat1SubAR", "من التراث الثقافي");
+
+/* STATS – BLOCK 2 */
+localStorage.setItem("stat2PrefixEN", "approximated");
+localStorage.setItem("stat2PrefixAR", "بنسبة تقارب");
+
+localStorage.setItem("stat2TitleEN", "Decline");
+localStorage.setItem("stat2TitleAR", "انخفاض");
+
+localStorage.setItem("stat2SubEN", "in the past 30 years");
+localStorage.setItem("stat2SubAR", "خلال الثلاثين عامًا الماضية");
+
+/* STATS – BLOCK 3 */
+localStorage.setItem("stat3PrefixEN", "less than");
+localStorage.setItem("stat3PrefixAR", "أقل من");
+
+localStorage.setItem("stat3TitleEN", "MASTER ARTISANS");
+localStorage.setItem("stat3TitleAR", "حرفيّين محترفين");
+
+localStorage.setItem("stat3SubEN", "remaining in Cairo");
+localStorage.setItem("stat3SubAR", "متبقّين في القاهرة");
 
   /* GALLERY */
   localStorage.setItem("galleryTitleEN", "Gallery");

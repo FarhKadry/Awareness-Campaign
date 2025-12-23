@@ -21,6 +21,16 @@ function updateLanguageContent() {
     "whySub",
     "statsTitle",
     "statsSub",
+    
+  "stat1Prefix",
+  "stat1Title",
+  "stat1Sub",
+  "stat2Prefix",
+  "stat2Title",
+  "stat2Sub",
+  "stat3Prefix",
+  "stat3Title",
+  "stat3Sub",
     "galleryTitle",
     "gallerySub",
     "galleryTitle2",
@@ -294,4 +304,22 @@ var swiper = new Swiper(".swiper", {
             </div>
             <a class="topBtn" href="#Home">Back To Top</a>
             <h6 class="footer-text">© 2024 Khayyamiya. Preserving ancient Egyptian craftsmanship.</h6>
+    `
+document.getElementById("heroBlock").innerHTML=`
+    <div class="flex_column moveIn2">
+                        <div class="mainShape centeredBg"></div>
+                    <h2>
+                        قبل ما <span>تبهت</span> الأشكال. 
+                    </h2>
+                    <h2>
+                       Before the patterns <span>fade.</span>
+                    </h2>
+                    <p id="heroPara">
+                        <!-- TEXTHERE -->
+                    </p>
+                </div>
+                <div class="buttonsFlex">
+                    <button  id="heroBtn1" class="button1">Learn the Story</button>
+                    <button id="heroBtn2" class="button1 button2">Support the Art</button>
+                </div>
     `
