@@ -9,6 +9,12 @@ if (!localStorage.getItem("loaded")) {
   localStorage.setItem("heroParaAR",
     "في قلب القاهرة، يحافظ الحرفيون المهرة على حرفة عريقة. لكن الوقت ينفد. كل غرزة تحكي قصة لا ينبغي نسيانها."
   );
+    /* HERO BUTTONS */
+    localStorage.setItem("heroBtn1EN", "Learn the Story");
+    localStorage.setItem("heroBtn1AR", "تعرّف على الحكاية");
+
+    localStorage.setItem("heroBtn2EN", "Support the Art");
+    localStorage.setItem("heroBtn2AR", "ادعم الفن");
 
   /* ABOUT */
   localStorage.setItem("moreTitleEN", "What is Khayyamiyya?");
@@ -44,7 +50,7 @@ if (!localStorage.getItem("loaded")) {
 
   /* STATS */
   localStorage.setItem("statsTitleEN", "The Numbers Send Alarms");
-  localStorage.setItem("statsTitleAR", "الأرقام تدق ناقوس الخطر");
+  localStorage.setItem("statsTitleAR", "الأرقام تدق أجراس الخطر");
 
   localStorage.setItem("statsSubEN",
     "A tradition on the brink of extinction."
@@ -55,7 +61,7 @@ if (!localStorage.getItem("loaded")) {
 
   /* GALLERY */
   localStorage.setItem("galleryTitleEN", "Gallery");
-  localStorage.setItem("galleryTitleAR", "المعرض");
+  localStorage.setItem("galleryTitleAR", "معرض الصور");
 
   localStorage.setItem("gallerySubEN",
     "Explore the beauty of Khayyamiyya details."

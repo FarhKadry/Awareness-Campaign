@@ -11,6 +11,8 @@ function updateLanguageContent() {
 
   const ids = [
     "heroPara",
+    "heroBtn1",
+    "heroBtn2",
     "moreTitle",
     "moreText1",
     "moreText2",
