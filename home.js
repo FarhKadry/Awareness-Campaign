@@ -86,6 +86,27 @@ for (let i = 0; i < navItems.length; i++) {
     </li>
     `;
 }
+
+// ACTIVE NAVBAR HIGHLIGHTING
+let navLinks = document.querySelectorAll("#navArray a");
+window.addEventListener("scroll", () => {
+    for (let i = 0; i < navItems.length; i++) {
+        let section = document.getElementById(navItems[i].id);
+        if (section) {
+            let sectionTop = section.offsetTop;
+            let sectionHeight = section.offsetHeight;
+            let scrollPosition = window.scrollY;
+            
+            if (
+                scrollPosition >= sectionTop - 150 &&
+                scrollPosition < sectionTop + sectionHeight - 150
+            ) {
+                navLinks.forEach(link => link.parentElement.classList.remove("active"));
+                navLinks[i].parentElement.classList.add("active");
+            }
+        }
+    }
+})
 //READMOREFUNC
 function readMore() {
     let moreText = document.getElementById('moreText2');

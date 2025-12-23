@@ -149,13 +149,12 @@ a{
     color: inherit;
 }
 nav ul li.active {
-    border-bottom: 2px solid var(--fixedAccent);
-    opacity: 1;
+    opacity: 0.5;
+    bottom: 2px;
 }
 
 nav ul li.active a {
-    color: var(--fixedAccent);
-    font-weight: 700;
+    font-weight: 300;
 }
 .lightButton{
     position: fixed;

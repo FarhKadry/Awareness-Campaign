@@ -45,9 +45,9 @@ let users = [
     Upass: "123" 
 },
     {
-    Uname: "John Doe", 
-    email: "john@example.com",
-    Upass: "password123"  
+    Uname: "Mohamed Ahmed", 
+    email: "Mohamed@gmail.com",
+    Upass: "123"  
     }
 ];
 localStorage.setItem("localUsers", JSON.stringify(users));
