@@ -232,7 +232,23 @@ function openLightbox(imgSrc) {
     document.getElementById("popUp").style.display = "flex";
     document.getElementById("lightboxImg").src = imgSrc;
 }
-
+var swiper = new Swiper(".swiper", {
+      grabCursor: true,
+      initialSlide: 2,
+      centeredSlides: true,
+      slidesPerView: "2",
+      spaceBetween: 40,
+      speed: 1000,
+      freeMode: false,
+      mousewheel: {
+        thresholdDelta: 30,
+      },
+      on: {
+        click(event) {
+          swiper.slideTo(this.clickedIndex);
+        },
+      },
+    });
 function closepopUp() {
     document.getElementById("popUp").style.display = "none";
 }
