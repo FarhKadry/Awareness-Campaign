@@ -8,22 +8,43 @@ window.addEventListener("load", () => {
 let localLang = localStorage.getItem("language") || "EN";
 
 function updateLanguageContent() {
-    let heroPara = document.getElementById("heroPara");
-    if (heroPara) {
-        let title = localStorage.getItem("title" + localLang);
-        if (title) {
-            heroPara.innerHTML = title;
-        }
-    }
+
+  const ids = [
+    "heroPara",
+    "moreTitle",
+    "moreText1",
+    "moreText2",
+    "moreBtn",
+    "whyTitle",
+    "whySub",
+    "statsTitle",
+    "statsSub",
+    "galleryTitle",
+    "gallerySub",
+    "galleryTitle2",
+    "formTitle",
+    "formSub"
+  ];
+
+  ids.forEach(id => {
+    let elements = document.querySelectorAll(`#${id}`);
+    elements.forEach(el => {
+      let value = localStorage.getItem(id + localLang);
+      if (value) {
+        el.innerHTML = value;
+      }
+    });
+  });
 }
 
+
+window.addEventListener("load", updateLanguageContent);
+
 function changeLang(lang) {
-    localStorage.setItem("language", lang);
-    window.location.reload();
+  localStorage.setItem("language", lang);
+  window.location.reload();
 }
-window.addEventListener("load", () => {
-    updateLanguageContent();
-});
+
 
 // LOGINFUNC
 function login(){
@@ -231,41 +252,44 @@ function loadGallery() {
 function openLightbox(imgSrc) {
     document.getElementById("popUp").style.display = "flex";
     document.getElementById("lightboxImg").src = imgSrc;
-}
+};
 var swiper = new Swiper(".swiper", {
-      grabCursor: true,
-      initialSlide: 2,
-      centeredSlides: true,
-      slidesPerView: "2",
-      spaceBetween: 20,
-      speed: 1000,
-      freeMode: false,
-      mousewheel: {
-        thresholdDelta: 30,
-      },
-      on: {
-        click(event) {
-          swiper.slideTo(this.clickedIndex);
-        },
-      },
-    });
-function closepopUp() {
-    document.getElementById("popUp").style.display = "none";
-}
-window.addEventListener("load", () => {
-    loadGallery();
+  grabCursor: true,
+  initialSlide: 1,
+  centeredSlides: true,
+  slidesPerView: "3",
+  spaceBetween: 20,
+  speed: 1000,
+  loop: true,
+  loopAdditionalSlides: 4,
+  freeMode: false,
+  mousewheel: {
+    thresholdDelta: 30,
+  },
+  on: {
+    click(event) {
+      swiper.slideTo(this.clickedIndex);
+    },
+  },
 });
-document.getElementById("footerCont").innerHTML=`
-<div class="title">
-            <img src="public/images/darkMainShape.svg" alt="">
-        <h5>Before the Patterns Fade</h5>
-        </div>
-        <div class="footer-links">
-            <a href="#Home">Home</a>
-            <a href="#About">About</a>
-            <a href="#Why">Why It's Fading</a>
-            <a href="#Action">Take Action</a>
-        </div>
-        <a class="topBtn" href="#Home">Back To Top</a>
-        <h6 class="footer-text">© 2024 Khayyamiya. Preserving ancient Egyptian craftsmanship.</h6>
-`
+
+    function closepopUp() {
+        document.getElementById("popUp").style.display = "none";
+    }
+    window.addEventListener("load", () => {
+        loadGallery();
+    });
+    document.getElementById("footerCont").innerHTML=`
+    <div class="title">
+                <img src="public/images/darkMainShape.svg" alt="">
+            <h5>Before the Patterns Fade</h5>
+            </div>
+            <div class="footer-links">
+                <a href="#Home">Home</a>
+                <a href="#About">About</a>
+                <a href="#Why">Why It's Fading</a>
+                <a href="#Action">Take Action</a>
+            </div>
+            <a class="topBtn" href="#Home">Back To Top</a>
+            <h6 class="footer-text">© 2024 Khayyamiya. Preserving ancient Egyptian craftsmanship.</h6>
+    `

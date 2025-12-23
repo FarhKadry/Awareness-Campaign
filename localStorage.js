@@ -1,14 +1,91 @@
-if(localStorage.getItem("loaded")){}
-else{
-let loaded= true;
-let titleAR = "في قلب القاهرة، يحافظ الحرفيون المهرة على حرفة عريقة. لكن الوقت ينفد. كل غرزة تحكي قصة لا ينبغي نسيانها.";
-let titleEN = "In the heart of Cairo, master artisans preserve an ancient craft. But time is running out. Every stitch tells a story that shouldn't be forgotten.";
-let language = "EN";
-localStorage.setItem("titleAR", titleAR);
-localStorage.setItem("titleEN", titleEN);
-localStorage.setItem("language", language);
-localStorage.setItem("loaded", loaded);
-};
+if (!localStorage.getItem("loaded")) {
+
+  let language = "EN";
+
+  /* HERO */
+  localStorage.setItem("heroParaEN",
+    "In the heart of Cairo, master artisans preserve an ancient craft. But time is running out. Every stitch tells a story that shouldn't be forgotten."
+  );
+  localStorage.setItem("heroParaAR",
+    "في قلب القاهرة، يحافظ الحرفيون المهرة على حرفة عريقة. لكن الوقت ينفد. كل غرزة تحكي قصة لا ينبغي نسيانها."
+  );
+
+  /* ABOUT */
+  localStorage.setItem("moreTitleEN", "What is Khayyamiyya?");
+  localStorage.setItem("moreTitleAR", "ما هي الخيامية؟");
+
+  localStorage.setItem("moreText1EN",
+    "Khayyamiyya is an ancient Egyptian appliqué art used to decorate ceremonial tents, deeply rooted in Cairo’s history."
+  );
+  localStorage.setItem("moreText1AR",
+    "الخيامية هي فن مصري قديم يعتمد على الزخرفة بالقماش، وكان يُستخدم لتزيين الخيام الاحتفالية، وهو جزء أصيل من تاريخ القاهرة."
+  );
+
+  localStorage.setItem("moreText2EN",
+    "These textiles are entirely handmade, combining geometry, color, and storytelling, and are now used in modern products."
+  );
+  localStorage.setItem("moreText2AR",
+    "تُصنع هذه القطع يدويًا بالكامل، وتجمع بين الهندسة والألوان والحكايات، وتُستخدم اليوم في منتجات عصرية."
+  );
+
+  localStorage.setItem("moreBtnEN", "Read More");
+  localStorage.setItem("moreBtnAR", "اقرأ المزيد");
+
+  /* WHY */
+  localStorage.setItem("whyTitleEN", "Why It's Fading");
+  localStorage.setItem("whyTitleAR", "لماذا يندثر هذا الفن");
+
+  localStorage.setItem("whySubEN",
+    "A storm of challenges threatens to erase this ancient art forever."
+  );
+  localStorage.setItem("whySubAR",
+    "تحديات متراكمة تهدد بمحو هذا الفن العريق إلى الأبد."
+  );
+
+  /* STATS */
+  localStorage.setItem("statsTitleEN", "The Numbers Send Alarms");
+  localStorage.setItem("statsTitleAR", "الأرقام تدق ناقوس الخطر");
+
+  localStorage.setItem("statsSubEN",
+    "A tradition on the brink of extinction."
+  );
+  localStorage.setItem("statsSubAR",
+    "تراث يقترب من الاندثار."
+  );
+
+  /* GALLERY */
+  localStorage.setItem("galleryTitleEN", "Gallery");
+  localStorage.setItem("galleryTitleAR", "المعرض");
+
+  localStorage.setItem("gallerySubEN",
+    "Explore the beauty of Khayyamiyya details."
+  );
+  localStorage.setItem("gallerySubAR",
+    "اكتشف جمال تفاصيل الخيامية."
+  );
+
+  localStorage.setItem("galleryTitle2EN", "Artisans' Work");
+  localStorage.setItem("galleryTitle2AR", "أعمال الحرفيين");
+
+  /* FORM */
+  localStorage.setItem("formTitleEN",
+    "Be Part of the Solution – Join Workshops!"
+  );
+  localStorage.setItem("formTitleAR",
+    "كن جزءًا من الحل – شارك في الورش!"
+  );
+
+  localStorage.setItem("formSubEN",
+    "Your support helps preserve this craft and sustain the artisans who keep it alive."
+  );
+  localStorage.setItem("formSubAR",
+    "مساهمتك تساعد في الحفاظ على هذا الفن ودعم الحرفيين الذين يحيونه."
+  );
+
+  localStorage.setItem("language", language);
+  localStorage.setItem("loaded", true);
+}
+
 
 // FORMFUNC
 function saveFormData() {
