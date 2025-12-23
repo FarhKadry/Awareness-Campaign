@@ -42,46 +42,40 @@
         </div>
     </header>
     <main>
-        <section class="hero loginHero centeredBg">
+        <section id="login" class="hero loginHero centeredBg">
             <div class="container">
                 <div class="contactForm loginForm scroll_animate2 moveIn">
-            <div class="flex_column moveIn2">
+                    <div class="flex_column moveIn2">
                         <div class="mainShape centeredBg"></div>
-                    <h2>
-                        قبل ما <span>تبهت</span> الأشكال. 
-                    </h2>
-                    <h2>
-                       Before the patterns <span>fade.</span>
-                    </h2>
+                        <h2>Log Into Your Account</h2>
+                    </div>
+                    <form id="form1">
+                        <div class="nameMailFlex">
+                            <!-- Username -->
+                            <div class="input1">
+                                <label for="Uname">Username:</label>
+                                <input placeholder="Enter Username Here" type="text" id="Uname" name="Uname">
+                            </div>
+                            <!-- Email -->
+                            <div class="input1">
+                                <label for="email">Email:</label>
+                                <input placeholder="Enter Email Here" type="email" id="email" name="email">
+                            </div>
+                        </div>
+                        <div class="input1 input2"> 
+                            <label for="Upass">Password:</label>
+                            <input placeholder="Enter Password Here" type="password" id="Upass" name="password">
+                        </div>
+                        <div id="err" style="display: none;"></div>
+                        <button type="button" class="button1" onclick="login()">Login</button>
+                    </form>
                 </div>
-            <form id="form1">
-                <div class="nameMailFlex">
-                    <!-- name -->
-                    <div class="input1">
-                        <label for="name">Name:</label>
-                        <input placeholder="Enter Name Here" type="text" id="name" name="name">
-                    </div>
-                    <div class="input1">
-                        <label for="email">Email:</label>
-                        <input  placeholder="Enter Email Here" type="email" id="email" name="email">
-                    </div>
-                </div>
-                <div class="input1 input2"> 
-                        <label for="password">Password:</label>
-                        <input placeholder="Enter Password Here" type="password" id="Upass" name="password">
-                    </div>
-        <button onclick="formSubmission()" type="submit" class="button1">Submit & Join!</button>
-    </form>
-            <img class="mandala rotateanim2" src="public/images/mandala1.svg">
-
-</div>
             </div>
-            <div class="separatorBottom"></div>
-            </section>
+            <img class="mandala rotateanim2" src="public/images/mandala1.svg">
+        </section>
     </main>
     <!-- FOOTERSTART -->
-    <footer class="centeredBg">
-            <div class="separatorBottom separtorTop"></div>
+    <footer class="centeredBg loginFooter">
     <div class="container footer-content">
         <div class="title">
             <img src="public/images/darkMainShape.svg" alt="">
@@ -90,7 +84,7 @@
         <div class="footer-links">
             <a href="index.html">Home</a>
         </div>
-        <a class="topBtn" href="#Home">Back To Top</a>
+        <a class="topBtn" href="#login">Back To Top</a>
         <h6 class="footer-text">© 2024 Khayyamiya. Preserving ancient Egyptian craftsmanship.</h6>
     </div>
 </footer>

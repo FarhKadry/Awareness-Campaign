@@ -25,8 +25,26 @@ window.addEventListener("load", () => {
     updateLanguageContent();
 });
 
-
-
+// LOGINFUNC
+function login(){
+    let  Uname = document.getElementById("Uname").value;
+    let  Upass = document.getElementById("Upass").value;
+    
+    let localUsers = JSON.parse(localStorage.getItem("localUsers"))
+    for(let i = 0; i<localUsers.length; i++){
+        if( Uname == localUsers[i].Uname && Upass == localUsers[i].Upass ){
+        window.location="index.html"
+    }
+    
+    else{
+        document.getElementById("err").innerHTML=`<h6>the password and email combination are incorrect!!</h6>`
+        document.getElementById("err").style.display="inline-block"
+        document.getElementById("err").style.color="var(--mainAccent)"
+    }
+    }
+    localStorage.setItem("localName", Uname);
+    localStorage.setItem("localPass", Upass);
+}
 // MODE TOGGLE
 let lightModeBtn = document.getElementById('lightModeBtn');
 

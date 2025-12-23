@@ -37,3 +37,17 @@ function getSavedData() {
     }
 }
 getSavedData();
+
+let users = [
+    {
+    Uname: "farh",
+    email: "farh@gmail.com",
+    Upass: "123" 
+},
+    {
+    Uname: "John Doe", 
+    email: "john@example.com",
+    Upass: "password123"  
+    }
+];
+localStorage.setItem("localUsers", JSON.stringify(users));
