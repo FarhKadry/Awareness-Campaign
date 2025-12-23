@@ -25,6 +25,7 @@
     --statsBg:url(public/images/StatisticsSection.jpg);
     --statsFig: url(public/images/statsFigure.svg);
     --loginIcon: url(public/images/login1.svg);
+    --gradient2: linear-gradient(180deg, #13134A 50.19%, rgba(19, 19, 74, 0.00) 100%);
 
 }
 .lightMode{
@@ -54,6 +55,8 @@
     --statsBg:url(public/images/StatisticsSectionLight.jpg);
     --statsFig: url(public/images/statsFigure2.svg);
     --loginIcon: url(public/images/login2.svg);
+    --gradient2: linear-gradient(180deg, #F0DED0 50.19%, rgba(254, 226, 205, 0.00) 100%);
+
 }
 *{
     margin: 0;
@@ -873,8 +876,18 @@ opacity: 0.9;
 .container2 {
     width: 100%;
     overflow: hidden;
+    position: relative;
+    max-width: 1280px;
 }
+.container2 .separtorTop{
+        border-radius: 50%;
+    width: 131%;
+    height: 50%;
+    top: -38%;
+    left: -13%;
+    background: var(--gradient2)
 
+}
 .swiper {
     width: 100%;
     padding: 50px 0;
@@ -888,15 +901,17 @@ opacity: 0.9;
 
 .swiper-slide img {
     width: 675px;
-    height: 900px;
+    height: 800px;
     object-fit: cover;
     transition: 1s;
     /* max-width:  */
+    opacity: 0.8;
 }
 
 .swiper-slide-active {
     width: 350px;
     transition: 1s;
+    opacity: 1;
 }
 
 .swiper-slide-active img {

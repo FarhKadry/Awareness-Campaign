@@ -237,7 +237,7 @@ var swiper = new Swiper(".swiper", {
       initialSlide: 2,
       centeredSlides: true,
       slidesPerView: "2",
-      spaceBetween: 40,
+      spaceBetween: 20,
       speed: 1000,
       freeMode: false,
       mousewheel: {
