@@ -161,27 +161,31 @@
             </div>
            </section>
             <!-- GALLERYSEC -->
-<section id="gallery">
+<section id="Gallery">
     <div class="container">
         <div class="title">
-            <h2>Gallery</h2>
+                    <img src="public/images/darkMainShape.svg" alt="">
+            <h2 id="galleryTitle">Gallery</h2>
+            <p id="gallerySub">Explore the beauty of khyayyamiya details</p>
         </div>
         <div class="galleryFlex" id="galleryFlex">
+            <div class="separatorBottom separtorTop"></div>
+            <div class="separatorBottom "></div>
             <!-- IMGS -->
         </div>
     </div>
 </section>
-<div id="popUp" class="popUp" onclick="closepopUp()" style="display: none;">
+<div id="popUp" class="popUp" onclick="closepopUp()">
     <div style="position: relative;">
-        <button onclick="closepopUp()" style="position: absolute; top: 10px; right: 10px; background: white; border: none; padding: 10px; cursor: pointer; font-size: 20px;">✕</button>
-        <img id="lightboxImg" src="" alt="Lightbox Image" style="max-width: 90vw; max-height: 90vh;">
+        <button onclick="closepopUp()" class="closeBtn">✕</button>
+        <img id="lightboxImg" src="" >
     </div>
 </div>
         <!-- CONTACTFORM -->
         <section id="Action" class="contactForm scroll_animate2 moveIn">
             <div class="contactFormImg centeredBg"></div>
             <div class="title">
-                    <h3 id="formTitle" class="messiri scroll_animate2 moveIn">Be Part of the Solution - Join Workshops!</h3>
+                    <h3 id="formTitle" class="messiri">Be Part of the Solution - Join Workshops!</h3>
                     <h6 id="formSub">Your involvement—whether through purchasing, visiting, sharing, or donating—directly impacts the survival of this ancient craft and the livelihoods of the artisans who keep it alive.</h6>
                 </div>
             <form id="form1">
@@ -207,19 +211,8 @@
     <!-- FOOTERSTART -->
     <footer class="centeredBg">
             <div class="separatorBottom separtorTop"></div>
-    <div class="container footer-content">
-        <div class="title">
-            <img src="public/images/darkMainShape.svg" alt="">
-        <h5>Before the Patterns Fade</h5>
-        </div>
-        <div class="footer-links">
-            <a href="#Home">Home</a>
-            <a href="#About">About</a>
-            <a href="#Why">Why It's Fading</a>
-            <a href="#Action">Take Action</a>
-        </div>
-        <a class="topBtn" href="#Home">Back To Top</a>
-        <h6 class="footer-text">© 2024 Khayyamiya. Preserving ancient Egyptian craftsmanship.</h6>
+    <div id="footerCont" class="container footer-content">
+        <!-- FOOTERITEMSHERE -->
     </div>
 </footer>
     <script src="localStorage.js"></script>

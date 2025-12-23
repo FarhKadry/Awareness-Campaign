@@ -239,3 +239,17 @@ function closepopUp() {
 window.addEventListener("load", () => {
     loadGallery();
 });
+document.getElementById("footerCont").innerHTML=`
+<div class="title">
+            <img src="public/images/darkMainShape.svg" alt="">
+        <h5>Before the Patterns Fade</h5>
+        </div>
+        <div class="footer-links">
+            <a href="#Home">Home</a>
+            <a href="#About">About</a>
+            <a href="#Why">Why It's Fading</a>
+            <a href="#Action">Take Action</a>
+        </div>
+        <a class="topBtn" href="#Home">Back To Top</a>
+        <h6 class="footer-text">© 2024 Khayyamiya. Preserving ancient Egyptian craftsmanship.</h6>
+`
