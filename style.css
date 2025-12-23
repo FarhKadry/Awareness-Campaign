@@ -836,3 +836,12 @@ h1{
 .loginFooter{
     margin: 0;
 }
+.galleryFlex{
+    flex-direction: row;
+    display: flex;
+     gap: 20px;
+     flex-wrap: nowrap;
+}
+.galleryFlex img{
+    width: calc(25% - 20px);
+}

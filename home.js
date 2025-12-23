@@ -34,8 +34,8 @@ function login(){
     for(let i = 0; i<localUsers.length; i++){
         if( Uname == localUsers[i].Uname && Upass == localUsers[i].Upass ){
         window.location="index.html"
+        alert("login successful!")
     }
-    
     else{
         document.getElementById("err").innerHTML=`<h6>the password and email combination are incorrect!!</h6>`
         document.getElementById("err").style.display="inline-block"
@@ -45,6 +45,7 @@ function login(){
     localStorage.setItem("localName", Uname);
     localStorage.setItem("localPass", Upass);
 }
+
 // MODE TOGGLE
 let lightModeBtn = document.getElementById('lightModeBtn');
 
