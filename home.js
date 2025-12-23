@@ -190,3 +190,31 @@ for (let i = 0; i < cardsData.length; i++) {
     </div>
   `;
 }
+//GALLERY FUNCS
+let galleryImages = [
+    { src: "public/images/lightboxImg01.jpg" },
+    { src: "public/images/lightboxImg02.jpg" },
+    { src: "public/images/lightboxImg03.jpg" },
+    { src: "public/images/lightboxImg04.jpg" }
+];
+
+function loadGallery() {
+    let galleryFlex = document.getElementById("galleryFlex");
+    for (let i = 0; i < galleryImages.length; i++) {
+        galleryFlex.innerHTML += `
+            <img src="${galleryImages[i].src}" onclick="openLightbox('${galleryImages[i].src}')">
+        `;
+    }
+}
+
+function openLightbox(imgSrc) {
+    document.getElementById("popUp").style.display = "flex";
+    document.getElementById("lightboxImg").src = imgSrc;
+}
+
+function closepopUp() {
+    document.getElementById("popUp").style.display = "none";
+}
+window.addEventListener("load", () => {
+    loadGallery();
+});
